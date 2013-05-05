@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script src="counting.js"></script>
+		<style>
+			* {
+				font-family: "Arial";
+				font-weight: bold;
+				font-size: 16px;
+			}
+			input {
+				padding: 2px;
+				margin: 10px;
+				max-width: 40px;
+			}
+			.counting > div {
+				display: inline-block;
+			}
+			.counting, .counting * {
+				font-size: 36px;
+				color: #444;
+			}
+			.row {
+				width: 100%;
+			}
+			.center {
+				text-align: center;
+			}
+			.not-sign {
+				visibility: hidden;
+			}
+			.sign {
+				vertical-align: top;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="row">
+			<div class="center">
+				<form>
+					<input type="text" name="year" id="year"></input>-
+					<input type="text" name="month" id="month"></input>-
+					<input type="text" name="day" id="day"></input>
+					<input type="text" name="hour" id="hour"></input>:
+					<input type="text" name="min" id="min"></input>
+				</form>
+				<div class="counting">
+					<div id="sign" class="not-sign">
+						超過
+					</div>
+					<div class="hour">
+						<div id="hour-last"></div>
+						<div>Hours</div>
+					</div>
+					:
+					<div class="min">
+						<div id="min-last"></div>
+						<div>Minutes</div>
+					</div>
+					:
+					<div class="second">
+						<div id="second-last"></div>
+						<div>Seconds</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
